@@ -4,16 +4,7 @@ import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
-import { useContext } from 'react'
 export default function Home() {
-  useEffect(()=>{
-    const {cart ,setCart} = useContext(productContext)
-    const abc =  window.localStorage.getItem('cart')
-    setCart(JSON.parse(abc))
-    },[])
-    useEffect(()=>{
-      window.localStorage.setItem('cart',JSON.stringify(cart))
-    },[cart])
   return (
     <div className={styles.container}>
       <Head>
