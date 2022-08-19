@@ -64,7 +64,7 @@ const Navbar = () => {
         </ul>
         <ul  >
           <li className={style.listItem}>
-          <Link style={{ color: "white" }} href="/cart">CART</Link><span className={style.cartNumber}>{cart.totalItems && cart.totalItems}</span>
+          <Link style={{ color: "white" }} href="/cart">CART</Link><span className={style.cartNumber}>{cart.totalItems ?? 0}</span>
           </li>
         </ul>
       </div>
